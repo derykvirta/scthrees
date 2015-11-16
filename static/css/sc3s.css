@@ -70,9 +70,9 @@ body {
 
 #sc-img1.filter,
 #sc-img2.filter {
-  -webkit-filter: blur(10px) grayscale(55%);
-  filter: blur(10px) grayscale(55%);
-  opacity: 0.9;
+  -webkit-filter: blur(6px) grayscale(55%);
+  filter: blur(6px) grayscale(55%);
+  opacity: 0.7;
 }
 
 #sc-img1, #sc-img2 {
@@ -313,6 +313,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
     width: auto;
     min-width: 50%;
     padding-right: 10px;
+  }
+
+  .stat-container > span:first-child {
+    color: #fff;
   }
 
   #c-sub {

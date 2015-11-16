@@ -30,6 +30,8 @@ window.sc3s = {
   },
 
   init: function() {
+	// Run filter on bg for based on window width.
+	this._filterBackgroundImage();
     this._preloadFromCache();
     this._startPoll();
 
@@ -149,10 +151,14 @@ window.sc3s = {
   },
 
   _onResize: function(e) {
+    this._filterBackgroundImage();
+	this._updateGraph(e);
+  },
+
+  _filterBackgroundImage: function() {
 	// Add filters to bg image if width is mobile or less.
 	var windowWidth = $(e.currentTarget).width();
-	$('#sc-img1, #sc-img2').toggleClass('filter', windowWidth <= 450);
-	this._updateGraph(e);
+	$('#sc-img1, #sc-img2').toggleClass('filter', windowWidth <= 450);	
   },
 
   _updateGraph: function(e) {
