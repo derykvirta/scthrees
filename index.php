@@ -2,7 +2,7 @@
   <head>
     <title>Curry 3 Count | How many 3s has Steph Curry made this season?</title>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="static/js/sc3s.min.js?v=3"></script>
+    <script src="static/js/sc3s.js?v=3"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

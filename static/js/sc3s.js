@@ -33,7 +33,7 @@ window.sc3s = {
     this._preloadFromCache();
     this._startPoll();
 
-    $(window).on('resize', this._updateGraph.bind(this));
+    $(window).on('resize', this._onResize.bind(this));
   },
 
   _startPoll: function() {
@@ -146,6 +146,13 @@ window.sc3s = {
     $.post('u.php', { t: threes, ta: threesAttempted, g: games, ng: nextGame });
 
     this._updateUI();
+  },
+
+  _onResize: function(e) {
+	// Add filters to bg image if width is mobile or less.
+	var windowWidth = $(e.currentTarget).width();
+	$('#sc-img1, #sc-img2').toggleClass('filter', windowWidth <= 450);
+	this._updateGraph(e);
   },
 
   _updateGraph: function(e) {
