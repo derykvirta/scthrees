@@ -157,7 +157,7 @@ window.sc3s = {
 
   _filterBackgroundImage: function() {
 	// Add filters to bg image if width is mobile or less.
-	var windowWidth = $(e.currentTarget).width();
+	var windowWidth = $(window).width();
 	$('#sc-img1, #sc-img2').toggleClass('filter', windowWidth <= 450);	
   },
 
