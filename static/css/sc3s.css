@@ -29,6 +29,11 @@ body {
   font-size: 1em;
 }
 
+.gold-text,
+.stat-container > span.gold-text {
+  color: #fbdc05;
+}
+
 #c {
   display: inline-block;
   margin: 0 auto;
@@ -66,13 +71,15 @@ body {
 #sc-img2 {
   width: 100%;
   height: auto;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
 }
 
 #sc-img1.filter,
 #sc-img2.filter {
   -webkit-filter: blur(6px) grayscale(55%);
   filter: blur(6px) grayscale(55%);
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 #sc-img1, #sc-img2 {
@@ -248,7 +255,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
 
 #tweet-button-ctr {
   padding-top: 4px;
+  min-height: 20px;
   background-color: #222;
+}
+
+#site-title {
+  display: none;
+  margin-bottom: 4px;
+  font-size: .4em;
+  letter-spacing: 0.08em;
+  color: #ddd;
 }
 
 @media screen and (min-width: 1000px) {
@@ -318,6 +334,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
   .stat-container > span:first-child {
     color: #fff;
   }
+  
+  /* lazy hack */
+  .stat-container > span.gold-text {
+	color: #fbdc05;
+  }
 
   #c-sub {
     padding: 0;
@@ -334,7 +355,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
 
   #m {
     position: absolute;
-    right: 0.70em;
+    right: 0.8em;
     top: 50%;
     width: 100%;
     max-width: none;
@@ -362,8 +383,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
   #l, #nl {
     position: absolute;
     bottom: -20px;
-    left: 0;
+    right: 0;
     width: 100%;
+    padding: 3px 8px;
     font-size: 11px;
   }
 
@@ -403,8 +425,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
   }
   
   #pace {
-	color: #ddd;
-    background-color: transparent;	
+	padding-right: 8px;
+    width: 100%;	
+    background-color: rgba(20, 20, 20, 0.6); 
+  }
+  
+  #site-title {
+	display: block;
   }
 }
 

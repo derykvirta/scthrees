@@ -55,6 +55,10 @@
                 <span>NEXT: <span id="ng"></span></span>
               </div>
             </div>
+			<div id="site-title" class="stat-container">
+              CURRY<span class="gold-text">3</span>COUNT
+              <span class="spacer"> </span>
+            </div>
             <div id="threes" class="stat-container">
               <span></span> <span id="3ptrs-label">3 PTRS</span>
               <span class="spacer"> </span>
