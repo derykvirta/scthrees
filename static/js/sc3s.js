@@ -50,13 +50,13 @@ window.sc3s = {
 
     var pace = Math.floor((this._data.threes/this._data.games)*82);
 
-    $('#pace > span:first-child').html(pace);
-    $('#threes > span:first-child').html(this._data.threes);
-    $('#games > span:first-child').html(this._data.games);
-    $('#pct > span:first-child').html(this._data.pct);
+    this._updateStat('#pace > span:first-child', pace, true);
+    this._updateStat('#pct > span:first-child', this._data.pct, true);
+    this._updateStat('#threes > span:first-child', this._data.threes);
+    this._updateStat('#games > span:first-child', this._data.games);
 
     // UI adjustments for higher numbers.
-    // Hack for justify shortcomings.
+    // Hack for text:justify shortcomings.
     $('#3ptrs-label').html(parseInt(this._data.threes) > 99 ? '3PTRS' : '3 PTRS');
 
     if (this._data.live) {
@@ -196,6 +196,41 @@ window.sc3s = {
     if (!l) return window.localStorage.removeItem(this._lCacheKey);
 
     this._setCached(this._lCacheKey, l);
+  },
+
+  /**
+   * Updates stat number and does visual effects.
+   */
+  _updateStat: function(selector, value, opt_force) {
+
+    // Stringify values to compare as strings.
+    // JS handles comparing things like "47.2" > "47.3" automatically.
+	var currValue = $(selector).html().toString();
+	value = value.toString();
+	
+	// Definitely return if the current value is the same.
+	if (currValue == value) return;
+	
+	// Return early if the current value is greater,
+	// unless force is True.	
+	if (!opt_force && (currValue > value)) return;
+	
+	// As defined in css, converted to ms.
+	var BLUR_DURATION = 0.5 * 1000;
+	var $el = $(selector);  
+	var $newEl = $el.clone(true);
+
+    // Add an el copy that will be blurred.
+	$el.before($newEl);
+	$el.remove();
+	
+	// Do blur in the cloned el.
+	$newEl.addClass('blur-fill');
+	
+	// Set the stat update to occur when the field is blurred.
+	window.setTimeout(function() {
+      $newEl.html(value);
+	}, BLUR_DURATION);
   },
 
   cp: function(key) {

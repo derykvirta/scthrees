@@ -435,31 +435,75 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
   }
 }
 
-/** Animation **/
+/** Animations **/
+.animate-flicker {
+  -webkit-animation: flickerAnimation 1.4s infinite;
+  -moz-animation: flickerAnimation 1.4s infinite;
+  -o-animation: flickerAnimation 1.4s infinite;
+  animation: flickerAnimation 1.4s infinite;
+}
+
+.blur-fill {
+  -webkit-animation: blurfill 1.0s;
+  -moz-animation: blurfill 1.0s;
+  -o-animation: blurfill 1.0s;
+  animation: blurfill 1.0s;
+  animation-timing-function: cubic-bezier(0.44, 0.94, 0.63, 0.28);
+}
+
 @keyframes flickerAnimation {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
 }
+
 @-o-keyframes flickerAnimation {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
 }
+
 @-moz-keyframes flickerAnimation {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
 }
+
 @-webkit-keyframes flickerAnimation {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
 }
 
-.animate-flicker {
-   -webkit-animation: flickerAnimation 1.4s infinite;
-   -moz-animation: flickerAnimation 1.4s infinite;
-   -o-animation: flickerAnimation 1.4s infinite;
-    animation: flickerAnimation 1.4s infinite;
+@keyframes blurfill {
+  0%   {
+	     filter: blur(0); 
+		 -webkit-filter: blur(0); 
+	   }
+  50%  { 
+	     filter: blur(10px); 
+	     -webkit-filter: blur(10px);
+	   }
+  100% { 
+	     filter: blur(0); 
+	     -webkit-filter: blur(0);
+	   }
+}
+
+@-o-keyframes blurfill {
+  0%   { filter: blur(0); }
+  50%  { filter: blur(10px); }
+  100% { filter: blur(0); }
+}
+
+@-moz-keyframes blurfill {
+  0%   { filter: blur(0); }
+  50%  { filter: blur(10px); }
+  100% { filter: blur(0); }
+}
+
+@-webkit-keyframes blurfill {
+  0%   { -webkit-filter: blur(0); }
+  50%  { -webkit-filter: blur(10px); }
+  100% { -webkit-filter: blur(0); }
 }
