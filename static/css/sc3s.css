@@ -79,7 +79,7 @@ body {
 #sc-img2.filter {
   -webkit-filter: blur(6px) grayscale(55%);
   filter: blur(6px) grayscale(55%);
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 #sc-img1, #sc-img2 {
