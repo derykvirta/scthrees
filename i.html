@@ -80,13 +80,14 @@
         </div>
       </div>
       <div id="f-ctr">
-        <div id="f">#CURRY3COUNT | SCTHREES.COM</div>
-        <div id="tweet-button-ctr">
+		<div id="tweet-button-ctr">
           <a style="display: none;" class="twitter-hashtag-button"
              href="<?php echo $twitter_intent_url ?>" >
             Tweet #curry3count
           </a>
         </div>
+        <div id="f">#CURRY3COUNT | SCTHREES.COM</div>
+        <div id="version">v0.8</div>
       </div>
     </div>
 

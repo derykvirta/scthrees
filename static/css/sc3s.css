@@ -162,12 +162,21 @@ body {
 }
 
 #f {
-  padding-top: 14px;
+  padding-top: 6px;
   font-size: .7em;
   font-variant: small-caps;
   color: #fff;
   background-color: #222;
   letter-spacing: .1em
+}
+
+#version {
+  padding-top: 4px;
+  font-size: .6em;
+  font-variant: small-caps;
+  color: #fff;
+  letter-spacing: .2em;
+  background-color: #222;
 }
 
 #spinner {
@@ -192,7 +201,6 @@ body {
   background: -webkit-linear-gradient(top,  #008eed 0%,#005a96 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #008eed 0%,#005a96 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008eed', endColorstr='#005a96',GradientType=0 ); /* IE6-9 */
-
 }
 
 #r-mtr.transition {
@@ -208,12 +216,11 @@ body {
   height: 0;
   bottom: 0;
   left: 0;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fccb44+0,f2ae26+50 */
-background: #fccb44; /* Old browsers */
-background: -moz-linear-gradient(top,  #fccb44 0%, #f2ae26 50%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #fccb44 0%,#f2ae26 50%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #fccb44 0%,#f2ae26 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', endColorstr='#f2ae26',GradientType=0 ); /* IE6-9 */
+  background: #fccb44; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fccb44 0%, #f2ae26 50%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #fccb44 0%,#f2ae26 50%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #fccb44 0%,#f2ae26 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', endColorstr='#f2ae26',GradientType=0 ); /* IE6-9 */
 
 }
 
@@ -254,7 +261,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccb44', end
 }
 
 #tweet-button-ctr {
-  padding-top: 4px;
+  padding-top: 12px;
   min-height: 20px;
   background-color: #222;
 }
