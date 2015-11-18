@@ -27,7 +27,7 @@
       $statscard_url = 'http://' . $_SERVER['HTTP_HOST'] . '/statscard.png?v=' . $rand;
     ?>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <link href='static/css/sc3s.min.css?v=5' rel='stylesheet' type='text/css'>
+    <link href='static/css/sc3s.css?v=5' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="favicon.ico" id="page_favicon" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary_large_image" />
@@ -40,9 +40,13 @@
     <div id="c">
       <div id="c-sub">
         <img id="sc-img1" src="static/img/sc3s2.png" /><div id="r-mtr">
-          <div id="rcrd"><div class="t-num">286</div></div>
+          <div id="rcrd">
+	        <div class="r-mtr-label">NBA REGULAR SEASON RECORD</div><div class="t-num">286</div>
+	      </div>
           <div id="curr">
-            <div id="curr-indctr"><div class="t-num">38</div></div>
+            <div id="curr-indctr">
+	          <div class="r-mtr-label">2015-2016 MADE 3s</div><div class="t-num"></div>
+	        </div>
           </div>
         </div>
         <div id="s-c">

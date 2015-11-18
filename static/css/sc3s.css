@@ -27,11 +27,23 @@ body {
 
 .t-num {
   font-size: 1em;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 .gold-text,
 .stat-container > span.gold-text {
   color: #fbdc05;
+}
+
+.r-mtr-label {
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  font-size: .5em;
+  font-variant: small-caps;
+  letter-spacing: .1em;
+  vertical-align: bottom;
 }
 
 #c {
@@ -83,8 +95,8 @@ body {
 }
 
 #sc-img1, #sc-img2 {
-  -webkit-transition: 1s ease-in;
-  transition: 0.8s ease-in;
+  -webkit-transition: height 0.8s ease-in;
+  transition: height 0.8s ease-in;
 }
 
 #m {
@@ -189,12 +201,13 @@ body {
 }
 
 #r-mtr {
+  display: inline-block;
   position: relative;
   /*background-color: #006bb7;*/
   width: 19px;
   height: 0;
   max-height: 450px;
-  display: inline-block;
+  
   vertical-align: bottom;
   background: #008eed; /* Old browsers */
   background: -moz-linear-gradient(top,  #008eed 0%, #005a96 100%); /* FF3.6-15 */
@@ -204,9 +217,9 @@ body {
 }
 
 #r-mtr.transition {
-  transition: 1.4s ease-in-out;
-  -moz-transition: 1.4s ease-in-out;
-  -webkit-transition: 1.4s ease-in-out;
+  transition: height 1.4s ease-in-out;
+  -moz-transition: height 1.4s ease-in-out;
+  -webkit-transition: height 1.4s ease-in-out;
 }
 
 #curr {
@@ -234,30 +247,35 @@ body {
   transition-delay: 1.4s;
 }
 
-#curr-indctr {
-  position: absolute;
-  background-color: transparent;
-  border-top: 2px solid rgba(255, 255, 255,0.8);
-  width: auto;
-  height: auto;
-  color: #fff;
-  top: 1px;
-  right: 0;
-  padding-right: 120%;
+#rcrd {
+  min-width: 200px;
 }
 
-#rcrd {
+#rcrd .r-mtr-label {
+  width: 140px;
+}
+
+#curr-indctr {
+  min-width: 148px;
+}
+
+#curr-indctr .r-mtr-label {
+  width: 88px;
+}
+
+#rcrd, #curr-indctr {
   position: absolute;
   top: 1px;
   right: 0;
-  padding-right: 120%;
+  padding: 4px 120% 4px 8px;
   width: auto;
   height: auto;
   color: #fff;
   text-align: right;
-  background-color: transparent;
-  border-top: 2px solid rgba(255, 255, 255,0.8);
+  border-top: 2px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
+  border-bottom-left-radius: 6px;
 }
 
 #tweet-button-ctr {
@@ -347,6 +365,10 @@ body {
 	color: #fbdc05;
   }
 
+  .r-mtr-label {
+    display: none;
+  }
+
   #c-sub {
     padding: 0;
   }
@@ -425,6 +447,8 @@ body {
     position: relative;
     padding: 0;
     text-align: center;
+    min-width: 0;
+    background-color: transparent;
   }
 
   #f {
