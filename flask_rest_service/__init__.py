@@ -11,7 +11,7 @@ if not MONGO_URL:
 
 app = Flask(__name__)
 
-app.config['MONGO_URI'] = MONGO_URL
+app.config['MONGO_URI'] = MONGOLAB_URI
 mongo = PyMongo(app)
 
 def output_json(obj, code, headers=None):
