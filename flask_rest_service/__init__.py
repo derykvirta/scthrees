@@ -5,12 +5,11 @@ from flask.ext.pymongo import PyMongo
 from flask import make_response
 from bson.json_util import dumps
 
-MONGO_URL = os.environ.get('MONGO_URL')
-if not MONGO_URL:
-    MONGO_URL = 'mongodb://heroku_nkg65vjs:dm0eagj237ofa7ghgnb63suih2@ds057234.mongolab.com:57234/heroku_nkg65vjs'
+MONGO_URL = 'mongodb://heroku_nkg65vjs:dm0eagj237ofa7ghgnb63suih2@ds057234.mongolab.com:57234/heroku_nkg65vjs'
 
 app = Flask(__name__)
 
+app.config['MONGO_URI'] = MONGO_URL
 app.config['MONGOLAB_URI'] = MONGO_URL
 mongo = PyMongo(app)
 
