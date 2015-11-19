@@ -7,11 +7,11 @@ from bson.json_util import dumps
 
 MONGO_URL = os.environ.get('MONGO_URL')
 if not MONGO_URL:
-    MONGO_URL = "mongodb://localhost:27017/rest";
+    MONGO_URL = 'mongodb://heroku_nkg65vjs:dm0eagj237ofa7ghgnb63suih2@ds057234.mongolab.com:57234/heroku_nkg65vjs'
 
 app = Flask(__name__)
 
-app.config['MONGO_URI'] = MONGOLAB_URI
+app.config['MONGOLAB_URI'] = MONGO_URL
 mongo = PyMongo(app)
 
 def output_json(obj, code, headers=None):
