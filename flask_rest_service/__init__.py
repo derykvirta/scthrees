@@ -9,7 +9,6 @@ MONGO_URL = 'mongodb://heroku_nkg65vjs:dm0eagj237ofa7ghgnb63suih2@ds057234.mongo
 
 app = Flask(__name__)
 
-app.config['MONGO_URI'] = MONGO_URL
 app.config['MONGOLAB_URI'] = MONGO_URL
 mongo = PyMongo(app)
 
