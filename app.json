@@ -1,5 +1,4 @@
 {
   "name": "Curry 3 Count",
-  "description": "Stephen Curry 3pt Counter",
-  "addons": [ "heroku-postgresql" ]
+  "description": "Stephen Curry 3pt Counter"
 }
