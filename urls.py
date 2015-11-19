@@ -8,7 +8,7 @@ from frontend import api
 
 urlpatterns = patterns('',
     url(r'^$', views.index),
-    url(r'^$', api.stats),
+    url(r'^api/stats', api.stats),
     #url(r'^db', hello.views.db, name='db'),
     #url(r'^admin/', include(admin.site.urls)),
 )
