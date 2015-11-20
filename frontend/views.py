@@ -1,20 +1,20 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+import os
+from flask import render_template
+from flask import send_from_directory
+from rest_service import app
 
-#from .models import Greeting
+@app.route('/')
+def index():
+  return render_template('index.html')
 
-# Create your views here.
-def index(request):
-    # return HttpResponse('Hello from Python!')
-    return render(request, 'index.html')
+@app.route('/static/css/<path:filename>')
+def serve_css(filename):
+  return send_from_directory(os.path.join(os.getcwd(), 'static', 'css'), filename)
 
-"""
-def db(request):
+@app.route('/static/js/<path:filename>')
+def serve_js(filename):
+  return send_from_directory(os.path.join(os.getcwd(), 'static', 'js'), filename)
 
-    greeting = Greeting()
-    greeting.save()
-
-    greetings = Greeting.objects.all()
-
-    return render(request, 'db.html', {'greetings': greetings})
-"""
+@app.route('/static/img/<path:filename>')
+def serve_img(filename):
+  return send_from_directory(os.path.join(os.getcwd(), 'static', 'img'), filename)
