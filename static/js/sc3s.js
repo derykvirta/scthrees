@@ -129,6 +129,9 @@ window.sc3s = {
     var threesAttempted = $statsDoc.find('[summary="Player Season Totals"] th:contains("2015-16")').parent().find('.3-point-shots-attemped').html();
     var games = $statsDoc.find('[summary="Player Season Totals"] th:contains("2015-16")').parent().find('.games').html();
 
+    // Hack
+    games = parseInt(games) + 2;
+
     if (live) {
       var $playerEntry = $liveDoc.find('th#table-1-nba\\.p\\.4612');
 
